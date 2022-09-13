@@ -1,8 +1,10 @@
-#ifndef HOLBERTON_H_INCLUDED
+#ifndef _HOLBERTON_H_
 
-#define HOLBERTON_H_INCLUDED
+#define _HOLBERTON_H_
 
-int _putchar(char);
+
+
+int _putchar(char c);
 
 void print_alphabet(void);
 
@@ -22,13 +24,9 @@ void jack_bauer(void);
 
 void times_table(void);
 
-int add(int a, int b);
+int add(int, int);
 
 void print_to_98(int n);
-
-void print_times_table(int n);
-
-void num(int r, int n);
 
 
 
