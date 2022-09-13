@@ -4,37 +4,33 @@
 
 /**
 
-  * main - Entry point
+ * main - This program prints the phrase Hello, World
 
-  *
+ * Return: Always 0 (Success)
 
-  * Return: Always 0
-
-  */
+ */
 
 int main(void)
 
 {
 
-	_putchar('_');
+	char ch[] = "_putchar";
 
-	_putchar('p');
+	int i;
 
-	_putchar('u');
 
-	_putchar('t');
 
-	_putchar('c');
+	for (i = 0; ch[i] != '\0'; i++)
 
-	_putchar('h');
+	{
 
-	_putchar('a');
+		_putchar(ch[i]);
 
-	_putchar('r');
+	}
+
+
 
 	_putchar('\n');
-
-
 
 	return (0);
 
