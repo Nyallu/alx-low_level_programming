@@ -1,75 +1,52 @@
-#include <unistd.h>
-
 #include "main.h"
 
 
 
 /**
- * times_table - This function prints the 9 times table
- * starting with 0
+ * jack_bauer - this function prints every minute of the day
+ * of Jack Bauer, starting from 00:00 to 23:59
+ * Return: Always 0 (Success)
  */
 
-void times_table(void)
+void jack_bauer(void)
 
 {
 
+	int a, b, c, d;
+
+	int i, j;
 
 
-	int x, y, a, b;
 
-
-
-	for (x = 0; x < 10; x++)
+	for (i = 0; i <= 23; i++)
 
 	{
 
-		for (y = 0; y < 10; y++)
+		for (j = 0; j <= 59; j++)
 
 		{
 
-			a = (x * y) / 10;
+			a = (i / 10) + '0';
 
-			b = (x * y) % 10;
+			b = (i % 10) + '0';
 
+			c = (j / 10) + '0';
 
+			d = (j % 10) + '0';
 
-			if ((x * y) > 9)
+			_putchar(a);
 
-				_putchar(a + '0');
+			_putchar(b);
 
+			_putchar(':');
 
+			_putchar(c);
 
-			_putchar(b + '0');
+			_putchar(d);
 
-
-
-			/* Don't print commas after the 10th column */
-
-			if (y != 9)
-
-			{
-
-				_putchar(',');
-
-				_putchar(' ');
-
-			}
-
-
-
-			/* Add an extra space if printing single digits */
-
-			if (y == 9 && x == 0)
-
-				break;
-
-			else if (x * (y + 1) < 10)
-
-				_putchar(' ');
+			_putchar('\n');
 
 		}
-
-		_putchar('\n');
 
 	}
 
