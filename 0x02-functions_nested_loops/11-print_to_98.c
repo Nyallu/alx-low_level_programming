@@ -1,69 +1,34 @@
-#include <stdio.h>
-
 #include "main.h"
 
 
 
 /**
- * print_to_98 - This function prints all natural numbers
- * from n to 98, followed by a new line
- * @n: Starting integer to count down or up to 98
+ * print_alphabet_x10 - This function prints the alphabet 10 times
+ * in lowercase, followed by a newline
  */
 
-void print_to_98(int n)
+void print_alphabet_x10(void)
 
 {
 
-	int i;
+	int ch, i;
 
 
 
-	if (n < 98)
-
-	{
-
-		for (i = n; i <= 98; i++)
-
-		{
-
-			if (i != 98)
-
-				printf("%i, ", i);
-
-			else
-
-				printf("%i", i);
-
-		}
-
-	}
-
-	else if (n > 98)
+	for (i = 0; i < 10; i++)
 
 	{
 
-		for (i = n; i >= 98; i--)
+		for (ch = 'a'; ch <= 'z'; ch++)
 
 		{
 
-			if (i != 98)
-
-				printf("%i, ", i);
-
-			else
-
-				printf("%i", i);
+			_putchar(ch);
 
 		}
 
+		_putchar('\n');
+
 	}
-
-	else
-
-		printf("%i", n);
-
-
-
-	printf("\n");
 
 }
