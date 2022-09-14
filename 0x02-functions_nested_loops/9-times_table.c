@@ -1,63 +1,45 @@
-/*
- * File: 9-times_table.c
- * Auth: nyallu
- */
-
-
-
-#include "main.h"
+#include <stdio.h>
 
 
 
 /**
- * times_table - Prints the 9 times table, starting with 0.
+ * times_table - prints the 9 times table, starting with 0
+ *
+ *
+ * Return: no return value
  */
 
 void times_table(void)
 
 {
 
-	int num, mult, prod;
+	int number = 0;
+
+	int multiplier = 0;
 
 
 
-	for (num = 0; num <= 9; num++)
+	for (multiplier = 0; multiplier < 10; multiplier++)
 
 	{
 
-		_putchar('0');
-
-
-
-		for (mult = 1; mult <= 9; mult++)
+		for (number = 0; number < 10; number++)
 
 		{
 
-			_putchar(',');
+			if (number > 0)
 
-			_putchar(' ');
+			{
 
+				printf(", ");
 
+			}
 
-			prod = num * mult;
-
-
-
-			if (prod <= 9)
-
-				_putchar(' ');
-
-			else
-
-				_putchar((prod / 10) + '0');
-
-
-
-			_putchar((prod % 10) + '0');
+			printf("%2d", number * multiplier);
 
 		}
 
-		_putchar('\n');
+		printf("\n");
 
 	}
 
