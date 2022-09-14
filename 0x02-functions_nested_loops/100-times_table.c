@@ -5,8 +5,7 @@
  * @n: integer to print
  * Return: void
  */
-
-void print_number(int n)
+void print_times_table(int n);
 {
 	int a, b;
 
@@ -40,8 +39,7 @@ void print_number(int n)
  * @n: times table to print
  * Return: void
  */
-
-void print_times_table(int n)
+void print_times_table(int n);
 {
 	int i, j, k;
 
