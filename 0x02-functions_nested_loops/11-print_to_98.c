@@ -3,32 +3,38 @@
 
 
 /**
- * print_alphabet_x10 - This function prints the alphabet 10 times
- * in lowercase, followed by a newline
+ * print_to_98 - prints all natural number from n to 98
+ * @n: an integer
+ *
+ * Return: No return value
  */
 
-void print_alphabet_x10(void)
+void print_to_98(int n)
 
 {
 
-	int ch, i;
+	int step = (n > 98 ? -1 : 1);
+
+	int i = n;
+
+	int stop = 98 + step;
 
 
 
-	for (i = 0; i < 10; i++)
+	while (i != stop)
 
 	{
 
-		for (ch = 'a'; ch <= 'z'; ch++)
+		if (i != n)
 
-		{
+			printf(", ");
 
-			_putchar(ch);
+		printf("%d", i);
 
-		}
-
-		_putchar('\n');
+		i += step;
 
 	}
+
+	printf("\n");
 
 }
