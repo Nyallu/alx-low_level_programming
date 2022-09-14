@@ -3,141 +3,95 @@
 
 
 /**
- * print_number - prints number up to n times
- * @n: integer to print
- * Return: void
+ * print_times_table - prints times table
+ * @n : times table to use
+ * Return:void
  */
 
-void print_number(int n)
 
-{
-
-	int a, b;
-
-
-
-	if (n != 0)
-
-	{
-
-		if (n < 0)
-
-		{
-
-			_putchar('-');
-
-			n = -n;
-
-		}
-
-		a = n / 10;
-
-		b = n % 10;
-
-		if (a != 0)
-
-		{
-
-			print_number(a);
-
-			_putchar(b + '0');
-
-		}
-
-		else
-
-			_putchar(b + '0');
-
-
-
-	}
-
-	else
-
-		_putchar('0');
-
-}
-
-
-
-/**
- * print_times_table - prints times table up to n times
- * @n: times table to print
- * Return: void
- */
 
 void print_times_table(int n)
 
 {
 
-	int i, j, k;
+
+
+int a = 0, rep, b;
 
 
 
-	if ((n >= 0) && (n <= 15))
+if (n < 0 || n > 15)
+
+	return;
+
+
+
+while (a <= n)
+
+{
+
+	for (b = 0; b <= n; b++)
 
 	{
 
-		for (i = 0; i <= n; i++)
+		rep = a * b;
+
+		if (b == 0)
+
+			_putchar('0' + rep);
+
+		else if (rep < 10)
 
 		{
 
-			_putchar('0');
+			_putchar(' ');
 
-			for (j = 1; j <= n; j++)
+			_putchar(' ');
 
-			{
+			_putchar('0' + rep);
 
-				k = i * j;
+		}
 
-				if ((k > 9) && (k < 100))
+		else if (rep < 100)
 
-				{
+		{
 
-					_putchar(',');
+			_putchar(' ');
 
-					_putchar(' ');
+			_putchar('0' + rep / 10);
 
-					_putchar(' ');
+			_putchar('0' + rep % 10);
 
-					print_number(k);
+		}
 
-				}
+		else
 
-				else if (k >= 100)
+		{
 
-				{
+			_putchar('0' + rep / 100);
 
-					_putchar(',');
+			_putchar('0' + (rep - 100) / 10);
 
-					_putchar(' ');
+			_putchar('0' + rep % 10);
 
-					print_number(k);
+		}
 
-				}
+		if (b < n)
 
-				else
+		{
 
-				{
+			_putchar(',');
 
-					_putchar(',');
-
-					_putchar(' ');
-
-					_putchar(' ');
-
-					_putchar(' ');
-
-					_putchar(k + '0');
-
-				}
-
-			}
-
-			_putchar('\n');
+			_putchar(' ');
 
 		}
 
 	}
+
+	_putchar('\n');
+
+	a++;
+
+}
 
 }
