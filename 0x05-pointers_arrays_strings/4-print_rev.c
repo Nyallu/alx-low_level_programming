@@ -1,38 +1,20 @@
+#include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string.
- * @s: pointer to String
- * Return: Nothing
- */
+*print_rev - Prints a string in reverse order
+*@s: String to reverse
+*Return: Nothing
+*/
 
-int _strlen(char *s)
+void print_rev(char *s)
 {
-	int i = 0;
+	int len = strlen(s);
 
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
+	while (len--)
+		putchar(*(s + len));
 
-	return (i);
-}
+	putchar(10);
 
-/**
- * print_rev - prints to string in reverse
- * @str: Strin to print
- * Return: Nothing
- */
-
-void print_rev(char *str)
-{
-	int i = 0, strln = 0;
-
-	strln = _strlen(str);
-	for (i = (strln - 1); i >= 0; i--)
-	{
-		_putchar(*(str + i));
-	}
-
-	_putchar('\n');
 }
