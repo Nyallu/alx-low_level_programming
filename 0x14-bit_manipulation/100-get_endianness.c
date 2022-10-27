@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * get_endianness - function that checks the endianness.
  *
