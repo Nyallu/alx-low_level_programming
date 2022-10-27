@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
+ *
  * get_endianness - return the endianness of the machine
- *Author: John Nyallu
  *
  * Return: 0 for big endian, 1 for little endian
+ *
  */
 
 int get_endianness(void)
 {
-	int n = 1;
+		int n = 1;
 
-	return (*((char *) &n) + '0');
+			return (*((char *) &n) + '0');
 }
